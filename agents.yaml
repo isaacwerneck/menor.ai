@@ -1,0 +1,9 @@
+version: "2.2"
+default_agent: menor_main
+agents:
+  menor_main:
+    name: "Menor — Assistente Principal"
+    model: "gemini-2.5-flash"
+    temperature: 0.2
+    instructions: "Use as ferramentas reais disponíveis; prefira patch_file para edições pontuais em arquivos existentes e nunca alegue uma ação sem resultado verificado."
+    allowed_tools: [list_files, read_file, search_files, write_file, patch_file, create_directory, move_to_trash, web_search, save_memory, recall_memory]
